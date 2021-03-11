@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+<p align="center">Teste Front-End Corebiz</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O intuito desse projeto é fazer a página inicial de um e-commerce consumindo uma api fornecida
+pela própria Corebiz, para trazer o seus produtos. Outro foco importante é as sua newslatter
+onde será feito um post das informações preenchidas na NewsLatter para uma API também fornecida
+pela Corebiz.
 
-## Available Scripts
+## Instalação
 
-In the project directory, you can run:
+Execute o comando:
+```bash
+$ yarn install
+```
+ou simplesmente:
+```bash
+$ yarn
+```
 
-### `yarn start`
+### Executando a Aplicação
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+$ yarn start
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Iniciará o projeto em ambiente de Desenvolvimento.
 
-### `yarn test`
+Abra [http://localhost:3000](http://localhost:3000)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Padronização de Código
 
-### `yarn build`
+- [ESLint](https://eslint.org/docs/user-guide/getting-started)
+- [Prettier](https://prettier.io/docs/en/install.html)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para rodar o ESLint e Prettier em todo o projeto, basta executar:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Eslint:
+```bash
+$ yarn lint
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Prettier:
+```bash
+$ yarn format
+```
 
-### `yarn eject`
+### VS Code
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Para que o VSCode faça a formatação do código de forma automática ao salvar o arquivo. É necessário instalar as extensões:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier - Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Em seguida, abrir o `settings.json`, use *ctrl + shift + P* e procure por: `Preferences: Open Settings (JSON)`, então, adicione as seguintes configurações:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```json
+"editor.codeActionsOnSave": {
+  "source.fixAll.eslint": true,
+},
+"[javascript]" : {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+},
+```
