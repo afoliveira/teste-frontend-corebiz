@@ -76,6 +76,22 @@ export const ContainerUser = styled.div`
     }
   }
 
+  & .cart {
+    display: flex;
+    align-items: center;
+
+    & .product__number {
+      background-color: #f8475f;
+      width: 14px;
+      height: 14px;
+      text-align: center;
+      margin-left: 5px;
+      font-size: 0.625rem;
+      border-radius: 50%;
+      color: #fff;
+    }
+  }
+
   @media(max-width: 800px) {
     .account {
       display: none;

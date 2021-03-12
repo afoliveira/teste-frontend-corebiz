@@ -1,4 +1,5 @@
 import {React} from 'react';
+import { useSelector } from 'react-redux';
 import {Container, Logo, ContainerInput, ContainerUser, MenuHamburguer} from './styles';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import logo from '../../assets/logo.svg'
@@ -9,6 +10,8 @@ import cart from '../../assets/icons/cart.svg'
 
 
 export default function Header () {
+  const productNumber = useSelector((state) => state);
+
   return (
     <Container>
       <Logo src={window.innerWidth > 800 ? logo : logoResponsivo}/>
@@ -32,6 +35,10 @@ export default function Header () {
         </div>
         <div className='cart'>
           <img src={cart} />
+          {!productNumber ?
+            <span >{null}</span>
+          : <span className='product__number'>{productNumber}</span>
+          }
         </div>
       </ContainerUser>
     </Container>
