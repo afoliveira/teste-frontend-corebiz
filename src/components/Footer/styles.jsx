@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 
 export const  ContainerFooter = styled.footer`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
   background-color: #000;
   padding: 30px;
+
+  & .footer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1250px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
 
   & .footer__item {
     color: #fff;
@@ -25,19 +30,37 @@ export const  ContainerFooter = styled.footer`
     background-color: #fff;
     height: 5px;
     width: 44.94px;
+    margin: 16px 0
   }
 
   & .footer__info {
-    font-size: 13px;
+    font-size: 0.813rem;
+  }
+
+  & .footer__contact {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   & .footer__contact__info {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 195px;
     background-color: #fff;
-    padding: 12px 17px;
     border-radius: 5px;
+  }
+
+  & .email {
+    padding: 12px 17px;
     margin-bottom: 30px;
+  }
+
+  & .consultor {
+    padding: 5px 17px;
   }
 
   & .footer__contact__info img {
@@ -47,7 +70,8 @@ export const  ContainerFooter = styled.footer`
   & .footer__contact__info p {
     color: #000;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
     line-height: 16.37px;
   }
 
