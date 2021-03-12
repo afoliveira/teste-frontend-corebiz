@@ -53,6 +53,7 @@ export const Input = styled.input`
   background: #fff;
   outline: none;
   margin-right: 8px;
+  padding-left: 10px;
 
   @media(max-width: 800px) {
     display: flex;
