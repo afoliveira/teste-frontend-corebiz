@@ -25,7 +25,7 @@ export const Title = styled.h2`
 
 export const ContainerItem = styled.div`
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   overflow-x: hidden;
 
   & .inner__item__container {
