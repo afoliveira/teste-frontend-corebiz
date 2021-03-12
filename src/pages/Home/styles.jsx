@@ -18,7 +18,7 @@ export const Banner = styled.section`
     position: absolute;
     left: 380px;
     top: 150px;
-    width: 390px;
+    max-width: 390px;
 
 
     & h2 {
