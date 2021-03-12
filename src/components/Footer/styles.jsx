@@ -4,13 +4,23 @@ export const  ContainerFooter = styled.footer`
   background-color: #000;
   padding: 30px;
 
+  @media(max-width: 800px) {
+    padding: 27px 16px 10px 16px;
+  }
+
   & .footer {
     display: flex;
-    flex-wrap: wrap;
     max-width: 1250px;
+    height: 320px;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+
+    @media(max-width: 800px) {
+      align-items: flex-start;
+      flex-direction: column;
+      height: 386px;
+    }
   }
 
   & .footer__item {
@@ -31,6 +41,7 @@ export const  ContainerFooter = styled.footer`
     height: 5px;
     width: 44.94px;
     margin: 16px 0
+
   }
 
   & .footer__info {
@@ -43,6 +54,11 @@ export const  ContainerFooter = styled.footer`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+
+    @media(max-width: 800px) {
+      align-self: center;
+    }
   }
 
   & .footer__contact__info {
@@ -52,6 +68,7 @@ export const  ContainerFooter = styled.footer`
     width: 195px;
     background-color: #fff;
     border-radius: 5px;
+
   }
 
   & .email {
@@ -77,6 +94,8 @@ export const  ContainerFooter = styled.footer`
 
   & .footer__brand {
     display: flex;
+    justify-content: space-between;
+    align-self: center;
   }
 
   & .footer__brand__item {
@@ -87,6 +106,6 @@ export const  ContainerFooter = styled.footer`
   }
 
   & .footer__brand :first-child {
-    margin-right: 25px
+    margin-right: 25px;
   }
 `;
